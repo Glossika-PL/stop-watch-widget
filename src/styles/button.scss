@@ -1,0 +1,39 @@
+@mixin button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #f4f3f0;
+    color:#fff;
+    font-size: 1.5rem;
+}
+
+
+.start{
+    @include button;
+    background-color: #bf9948;
+    &:hover{
+        background: #caa24a;
+    }
+}
+
+.reset
+,.lap{
+    @include button;
+    background-color: #9d8271;
+    &:hover{
+        background: #a78977;
+    }
+    &:disabled{
+        background: #d2c2b5;
+        color: #000;
+        cursor: not-allowed;
+    }
+}
+
+.stop{
+    @include button;
+    background-color: #8a4642;
+    &:hover{
+        background: #974b47;
+    }
+}
